@@ -6,4 +6,4 @@ select
     amount,
     created as created_date,
     _batched_at
-from jack_dbt_raw.stripe.payment
+from {{ source('stripe', 'payment') }}
